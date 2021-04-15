@@ -2,20 +2,28 @@
     <div ref="modal" class="modal" :class="visited ? 'is-active' : ''">
         <div class="modal-background"></div>
         <div class="modal-card">
-            <header class="modal-card-head">
-                <p class="modal-card-title">Modal title</p>
+            <header
+                class="modal-card-head has-background-success is-justify-content-space-between"
+            >
+                <img
+                    src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_CMYK_White.png"
+                    alt="Logo"
+                />
                 <button
-                    class="delete"
+                    class="delete is-large"
                     aria-label="close"
                     @click="closeModal"
                 ></button>
             </header>
             <section class="modal-card-body">
-                <!-- Content ... -->
+                <h3 class="is-size-1">$7.90</h3>
+                <small>per month</small>
+                <button class="button is-danger is-rounded is-large mt-6">
+                    Subscribe
+                </button>
             </section>
-            <footer class="modal-card-foot">
-                <button class="button is-success">Save changes</button>
-                <button class="button">Cancel</button>
+            <footer class="modal-card-foot is-justify-content-center">
+                Spotify
             </footer>
         </div>
     </div>
@@ -38,8 +46,6 @@ export default {
             !document.cookie.split("; ").find(row => row.startsWith("visited"))
         ) {
             document.cookie = "visited=true";
-            console.log("cookie impostato");
-            console.log(document.cookie);
         } else {
             this.visited = false;
         }
@@ -47,4 +53,14 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+header img {
+    height: 40px;
+}
+.modal-card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+</style>
