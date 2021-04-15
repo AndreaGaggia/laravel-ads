@@ -14,7 +14,7 @@
 <body>
 
     <div id="app">
-        <section class="hero is-link is-fullheight">
+        <section class="hero is-info is-fullheight">
             <!-- Hero head: will stick at the top -->
             <div class="hero-head">
                 <header class="navbar">
@@ -33,12 +33,12 @@
                         <div id="navbarMenuHeroC" class="navbar-menu">
                             <div class="navbar-end">
                                 <span class="navbar-item">
-                                    <a class="button is-dark is-inverted">
+                                    <a href="{{ route('cookies') }}" class="button is-dark is-inverted">
                                         <span>Cookies</span>
                                     </a>
                                 </span>
                                 <span class="navbar-item">
-                                    <a class="button is-dark">
+                                    <a href="{{ route('sessions') }}" class="button is-dark">
                                         <span>Session</span>
                                     </a>
                                 </span>
@@ -54,7 +54,7 @@
                     <p class="title is-size-1">
                         Spotify fake
                     </p>
-                    <Solution solution="Cookies" />
+                    <Solution solution="Sessions" />
                 </div>
             </div>
 
@@ -72,7 +72,7 @@
             </div>
         </section>
 
-        <Modal />
+        <Modal s_visited='{{ $is_visited }}' />
     </div>
 
     <script src="{{ asset('js/app.js') }}"></script>

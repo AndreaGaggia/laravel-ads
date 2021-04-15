@@ -1,5 +1,9 @@
 <template>
-    <div ref="modal" class="modal" :class="visited ? 'is-active' : ''">
+    <div
+        ref="modal"
+        class="modal"
+        :class="visited || s_visited ? 'is-active' : ''"
+    >
         <div class="modal-background"></div>
         <div class="modal-card">
             <header
@@ -31,6 +35,7 @@
 
 <script>
 export default {
+    props: ["s_visited"],
     data() {
         return {
             visited: true

@@ -1876,7 +1876,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  props: ["s_visited"],
   data: function data() {
     return {
       visited: true
@@ -37679,7 +37684,7 @@ var render = function() {
     {
       ref: "modal",
       staticClass: "modal",
-      class: _vm.visited ? "is-active" : ""
+      class: _vm.visited || _vm.s_visited ? "is-active" : ""
     },
     [
       _c("div", { staticClass: "modal-background" }),
